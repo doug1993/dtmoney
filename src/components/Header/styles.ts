@@ -14,11 +14,12 @@ export const Content = styled.div`
     justify-content: space-between;
 
     button{
+        margin-top: 2rem;
         font-size: 0.7rem;
         color: #FFF;
         background: var(--blue-light);
         border: 0;
-        padding: 0 2rem;
+        padding:  0 2rem;
         border-radius: 2rem;
         height: 3rem;
 
