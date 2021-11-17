@@ -46,5 +46,41 @@ export const GlobalStyle =  createGlobalStyle`
             opacity: 0.955;
             cursor: not-allowed
         }
+        .react-modal-overlay{
+            background:  rgba(0,0,0,0.75);
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        };
+
+        .react-modal-content{
+            width: 100%;
+            max-width: 760px;
+            background: var(--background);
+            padding: 3rem;
+            position: relative;
+            border-radius: 0.5rem;
+
+        }
+
+        button#exit{
+        border: 0;
+        background: transparent;
+        position: absolute; 
+        right: 1.5rem;
+        top: 1.5rem;
+
+        transition: filter 0.7s;
+        &:hover{
+            filter: brightness(0.4)
+        }
+        
+    }
 `   
