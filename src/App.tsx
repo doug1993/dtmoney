@@ -5,13 +5,16 @@ import { Dashboard } from './components/Dashboard';
 import { TransactionsTable } from './components/TransactionsTable';
 import { useState } from 'react'
 import Modal from 'react-modal'
+import { NewtransactionModal } from './components/NewTransactionModal';
 const Title = styled.h1`
   font-size:68px; 
   font-family:'Roboto' ;
   color:#8257e6 ;
 `
 Modal.setAppElement('#root')
+
 export function App() {
+ 
   const [isNewTransactionModalOpen,setIsNewTransactionModalOpen] = useState(false)
 
   function handleOpenNewTransactionModal(){
@@ -20,16 +23,17 @@ export function App() {
   function handleCloseNewTransactionModal(){
     setIsNewTransactionModalOpen(false)
   }
+
   return (
     
     <>
       <Header onOpenNewTransactionModal={handleOpenNewTransactionModal}/>
       <Dashboard/>
       <TransactionsTable/>
-      <Modal isOpen={isNewTransactionModalOpen}
-        onRequestClose={handleCloseNewTransactionModal}>
-            <h2>cadastrar</h2>
-        </Modal>
+      <NewtransactionModal
+        isOpen={isNewTransactionModalOpen}
+        onRequestClose={handleCloseNewTransactionModal}
+      />
       <GlobalStyle/>
 
     </>

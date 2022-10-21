@@ -60,13 +60,13 @@ export const GlobalStyle = createGlobalStyle`
   }
   .react-modal-content {
     width: 100%;
-    max-width: 576px;
+    max-width: 700px;
     background: var(--background);
     padding: 3rem;
     position: relative;
     border-radius: 0.24rem;
   }
-  
+   
   .react-modal-close {
     position: absolute;
     right: 1.5rem;
@@ -76,6 +76,41 @@ export const GlobalStyle = createGlobalStyle`
     transition: filter 0.2s;
     &:hover {
       filter: brightness(0.8);
-    }
+  
   }
+}
+    .global-overlay-modal{
+      background:rgba(0,0,0,.6) ;
+      position:fixed ;
+      top: 0;
+      bottom:0 ;
+      right:0 ;
+      left:0 ;
+
+      display:flex ;
+      align-items:center ;
+      justify-content:center ;
+    }
+    .global-content-modal{
+      width:100% ;
+      max-width:576px ;
+      background-color: var(--shape) ;
+      border:0.2px solid ;
+      padding: 2rem ;
+      border-radius:2rem ;
+      position:relative;
+      font-family:'Poppins' ;
+
+    }
+    .button-close-modal{
+      position:absolute ;
+      right:1.5rem ;
+      top: 1.5rem;
+      border: 0;
+      background: transparent;
+      transition: filter 0.25s ;
+      &:hover{
+        filter:brightness(0.5) ;
+      }
+    }
 `
